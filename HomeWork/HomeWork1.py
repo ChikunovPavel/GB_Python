@@ -7,36 +7,36 @@
 
 # a = int(input('input a day:'))
 
-# if a == 6 or 7:
-#     print('yes')
+# if 6 <= a <= 7:
+#     print("Yes")
 # else:
-#     print('no')    
+#     print('No')    
 
 
 # 2.(!!!Доп!!!) Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 # (0,0,0), (0,0,1) и тд.
 
-def inputNumbers(x):
-    xyz = ["X", "Y", "Z"]
-    a = []
-    for i in range(x):
-        a.append(input(f"input value {xyz[i]}: "))
+# def inputNumbers(x):
+#     xyz = ["X", "Y", "Z"]
+#     a = []
+#     for i in range(x):
+#         a.append(input(f"input value {xyz[i]}: "))
   
 
 
-def checkPredicate(x):
-    left = not (x[0] or x[1] or x[2])
-    right = not x[0] and not x[1] and not x[2]
-    result = left == right
-    return result
+# def checkPredicate(x):
+#     left = not (x[0] or x[1] or x[2])
+#     right = not x[0] and not x[1] and not x[2]
+#     result = left == right
+#     return result
 
 
-statement = inputNumbers(3)
+# statement = inputNumbers(3)
 
-if checkPredicate(statement) == True:
-    print(f"true")
-else:
-    print(f"false")
+# if checkPredicate(statement) == True:
+#     print(f"true")
+# else:
+#     print(f"false")
 
 
 
