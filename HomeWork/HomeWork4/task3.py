@@ -5,7 +5,8 @@
 # 2 1
 
 list = input("Enter numbers separated by spaces ").split()
-# list = [12,12,32,12,1,2,3,32,14,15,15]
+# list = [12,12,32,12,1,2,3,32,14,15,15]    
+# count()  --- cчитает количечво вхождений
 newlist =[]
 print(list)
 for i in list:
@@ -15,5 +16,5 @@ for i in list:
             num +=1
     if num == 1:
         newlist += [i]
-print(newlist)
+print(*newlist)  # звездочка распаковывает
             
