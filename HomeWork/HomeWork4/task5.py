@@ -20,15 +20,15 @@ def reader(file):
 
 
 def convert(pol):
-    pol = pol.replace('= 0', '')
-    pol = re.sub("[*|^| ]", " ", pol).split('+')
+    pol = pol.replace('= 0', '') # замена символа на символ
+    pol = re.sub("[*|^| ]", " ", pol).split('+') # возврашает новую строку 
     pol = [char.split(' ') for char in pol]
     pol = [[x for x in list if x] for list in pol]
     for i in pol:
         if i[0] == 'x': i.insert(0, 1)
         if i[-1] == 'x': i.append(1)
         if len(i) == 1: i.append(0)
-    pol = [tuple(int(x) for x in j if x != 'x') for j in pol]
+    pol = [tuple(int(x) for x in j if x != 'x') for j in pol] # кортеж 
     return pol
 
 def fold_pols(pol1, pol2):   
@@ -43,7 +43,7 @@ def get_sum_pol(pol):
     var = ['*x^'] * len(pol)
     coefs = [x[0] for x in pol]
     degrees = [x[1] for x in pol]
-    new_pol = [[str(a), str(b), str(c)] for a, b, c in (zip(coefs, var, degrees))]
+    new_pol = [[str(a), str(b), str(c)] for a, b, c in (zip(coefs, var, degrees))] # берёт на вход несколько списков и создаёт из них список
     for x in new_pol:
         if x[0] == '0': del (x[0])
         if x[-1] == '0': del (x[-1], x[-1])
